@@ -80,9 +80,7 @@
     transition: all 0.2s;
   }
 
-  .nav-cta:hover {
-    background: var(--orange-glow);
-  }
+  .nav-cta:hover { background: var(--orange-glow); }
 
   /* ── HERO ── */
   .hero {
@@ -142,10 +140,7 @@
     margin-bottom: 36px;
   }
 
-  .hero-headline em {
-    font-style: italic;
-    color: var(--orange);
-  }
+  .hero-headline em { font-style: italic; color: var(--orange); }
 
   .hero-sub {
     font-size: 19px;
@@ -156,10 +151,7 @@
     line-height: 1.6;
   }
 
-  .hero-sub strong {
-    color: var(--text-primary);
-    font-weight: 500;
-  }
+  .hero-sub strong { color: var(--text-primary); font-weight: 500; }
 
   .hero-actions {
     display: flex;
@@ -283,10 +275,7 @@
     letter-spacing: -0.01em;
   }
 
-  .problem-headline em {
-    font-style: italic;
-    color: var(--orange);
-  }
+  .problem-headline em { font-style: italic; color: var(--orange); }
 
   .problem-stats {
     display: flex;
@@ -339,10 +328,6 @@
     border-bottom: 0.5px solid var(--border);
   }
 
-  .what-section section {
-    max-width: 1100px;
-  }
-
   .what-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -361,10 +346,7 @@
     margin-bottom: 28px;
   }
 
-  .what-headline em {
-    font-style: italic;
-    color: var(--orange);
-  }
+  .what-headline em { font-style: italic; color: var(--orange); }
 
   .what-body {
     font-size: 17px;
@@ -373,11 +355,6 @@
   }
 
   .what-body p + p { margin-top: 16px; }
-
-  .what-body strong {
-    color: var(--text-primary);
-    font-weight: 500;
-  }
 
   .what-outputs {
     display: flex;
@@ -402,15 +379,6 @@
     left: 0; top: 0; bottom: 0;
     width: 3px;
     background: var(--orange);
-  }
-
-  .output-num {
-    font-family: var(--font-mono);
-    font-size: 10px;
-    color: var(--orange);
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-bottom: 10px;
   }
 
   .output-title {
@@ -544,34 +512,12 @@
     padding: 90px 40px;
   }
 
-  .pilot-label {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--orange);
-    margin-bottom: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .pilot-label::before, .pilot-label::after {
-    content: '';
-    display: block;
-    width: 24px;
-    height: 1px;
-    background: var(--orange);
-  }
-
   .pilot-headline {
     font-family: var(--font-head);
     font-size: clamp(40px, 6vw, 72px);
     font-weight: 800;
     line-height: 0.92;
     text-transform: uppercase;
-    letter-spacing: -0.01em;
     margin-bottom: 28px;
   }
 
@@ -585,11 +531,6 @@
     max-width: 560px;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .pilot-body strong {
-    color: var(--text-primary);
-    font-weight: 500;
   }
 
   .pilot-terms {
@@ -607,7 +548,6 @@
     font-family: var(--font-mono);
     font-size: 12px;
     color: var(--text-secondary);
-    letter-spacing: 0.08em;
     text-transform: uppercase;
   }
 
@@ -619,14 +559,12 @@
     border-radius: 50%;
   }
 
-  /* ── QUESTIONNAIRE ── */
+  /* ── FORM SECTION ── */
   .form-section {
     max-width: 860px;
     margin: 0 auto;
     padding: 80px 20px 100px;
   }
-
-  .form-section .section-label { justify-content: center; }
 
   .form-headline {
     font-family: var(--font-head);
@@ -634,7 +572,6 @@
     font-weight: 800;
     text-transform: uppercase;
     text-align: center;
-    letter-spacing: -0.01em;
     margin-bottom: 12px;
   }
 
@@ -645,13 +582,14 @@
     margin-bottom: 52px;
   }
 
-  /* Modified for actual Typeform height */
   .form-container {
     background: var(--surface);
     border: 0.5px solid var(--border);
     border-top: 2px solid var(--orange);
     width: 100%;
-    height: 600px; /* Adjust based on form length */
+    min-height: 600px; /* Fixed height for the widget to fill */
+    position: relative;
+    overflow: hidden;
   }
 
   /* ── FOOTER ── */
@@ -668,7 +606,6 @@
     font-size: 14px;
     font-weight: 600;
     color: var(--text-muted);
-    letter-spacing: 0.04em;
   }
 
   .footer-brand span { color: var(--orange); }
@@ -677,53 +614,34 @@
     font-family: var(--font-mono);
     font-size: 11px;
     color: var(--text-muted);
-    letter-spacing: 0.05em;
   }
 
-  /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     nav { padding: 0 20px; }
     .hero { padding: 100px 20px 60px; }
-    section { padding: 70px 20px; }
-    .problem-grid { grid-template-columns: 1fr; gap: 40px; }
-    .what-grid { grid-template-columns: 1fr; gap: 40px; }
-    .for-grid { grid-template-columns: 1fr; }
+    .problem-grid, .what-grid, .for-grid { grid-template-columns: 1fr; }
     .phase-content { flex-direction: column; gap: 8px; }
-    .phase-title { min-width: unset; }
     footer { flex-direction: column; gap: 12px; text-align: center; }
-    .pilot-terms { flex-direction: column; align-items: center; gap: 16px; }
-    .form-container { height: 700px; } /* Slightly taller for mobile */
   }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">Race <span>Funded</span></a>
   <a href="#apply" class="nav-cta">Apply Now</a>
 </nav>
 
-<!-- HERO -->
 <section class="hero" style="max-width:100%; padding-left: 8vw; padding-right: 8vw;">
   <div class="hero-label">Commercial Infrastructure for Racing Drivers</div>
-
-  <h1 class="hero-headline">
-    Sponsors don't buy<br>
-    <em>followers.</em>
-  </h1>
-
-  <p class="hero-sub">
-    They buy <strong>verified audiences.</strong> Race Funded is the program that builds yours — and turns it into direct funding before the first race.
-  </p>
-
+  <h1 class="hero-headline">Sponsors don't buy<br><em>followers.</em></h1>
+  <p class="hero-sub">They buy <strong>verified audiences.</strong> Race Funded is the program that builds yours — and turns it into direct funding before the first race.</p>
   <div class="hero-actions">
     <a href="#apply" class="btn-primary">Apply for the Pilot</a>
     <span class="hero-note">Free for 2–3 drivers this season</span>
   </div>
 </section>
 
-<!-- TICKER -->
 <div class="ticker">
   <div class="ticker-track">
     <div class="ticker-item"><span class="dot"></span>Fan membership</div>
@@ -732,195 +650,131 @@
     <div class="ticker-item"><span class="dot"></span>Direct funding</div>
     <div class="ticker-item"><span class="dot"></span>Sponsor data</div>
     <div class="ticker-item"><span class="dot"></span>Commercial infrastructure</div>
-    <div class="ticker-item"><span class="dot"></span>Done with you</div>
     <div class="ticker-item"><span class="dot"></span>Fan membership</div>
     <div class="ticker-item"><span class="dot"></span>Audience intelligence</div>
-    <div class="ticker-item"><span class="dot"></span>Season pass</div>
-    <div class="ticker-item"><span class="dot"></span>Direct funding</div>
-    <div class="ticker-item"><span class="dot"></span>Sponsor data</div>
-    <div class="ticker-item"><span class="dot"></span>Commercial infrastructure</div>
-    <div class="ticker-item"><span class="dot"></span>Done with you</div>
   </div>
 </div>
 
-<!-- THE PROBLEM -->
-<section>
+<section id="problem">
   <div class="section-label">01 — The Problem</div>
   <div class="problem-grid">
     <div>
-      <h2 class="problem-headline">
-        The funding gap<br>
-        isn't your<br>
-        <em>following.</em><br>
-        It's your data.
-      </h2>
+      <h2 class="problem-headline">The funding gap<br>isn't your<br><em>following.</em><br>It's your data.</h2>
       <div class="problem-body">
         <p>Every driver has a social media presence. Almost none can tell a sponsor who their audience actually is — what they buy, where they go, what brands they already trust.</p>
-        <p>So the sponsorship conversation stalls. Every time. A follower count is the least interesting number in that meeting.</p>
-        <p>The driver with 8,000 followers and no data is in the same position as the driver with 800.</p>
+        <p>A follower count is the least interesting number in that meeting.</p>
       </div>
     </div>
     <div class="problem-stats">
-      <div class="stat-row">
-        <div class="stat-num">£0</div>
-        <div class="stat-text">What a follower count is worth to a sponsor deciding whether to write a cheque</div>
-      </div>
-      <div class="stat-row">
-        <div class="stat-num">~90%</div>
-        <div class="stat-text">Of sponsorship cold outreach goes unanswered — drivers are asking, not offering</div>
-      </div>
-      <div class="stat-row">
-        <div class="stat-num">100%</div>
-        <div class="stat-text">Of serious sponsors need verified audience intelligence before committing budget</div>
-      </div>
+      <div class="stat-row"><div class="stat-num">£0</div><div class="stat-text">Value of a follower count without conversion data</div></div>
+      <div class="stat-row"><div class="stat-num">100%</div><div class="stat-text">Of sponsors need verified audience intelligence</div></div>
     </div>
   </div>
 </section>
 
-<!-- WHAT IT IS -->
 <div class="what-section">
-  <section style="max-width: 1100px;">
+  <section>
     <div class="section-label">02 — What Race Funded Is</div>
     <div class="what-grid">
       <div>
-        <h2 class="what-headline">
-          Two outputs.<br>
-          One <em>program.</em>
-        </h2>
+        <h2 class="what-headline">Two outputs.<br>One <em>program.</em></h2>
         <div class="what-body">
-          <p>Race Funded is a <strong>done-with-you consulting program</strong> that builds a fan membership — a season pass your most engaged followers buy into before your first race.</p>
-          <p>The membership does two things at once. It generates <strong>direct funding</strong> before the season starts. And it produces <strong>real audience data</strong> — what your fans spend money on, where they live, what brands they already buy.</p>
-          <p>That data is what a corporate sponsor actually needs before they make a decision. The membership is the first step, not the end goal.</p>
+          <p>Race Funded builds a fan membership that generates <strong>direct funding</strong> and produces <strong>real audience data</strong> simultaneously.</p>
         </div>
       </div>
       <div class="what-outputs">
         <div class="output-card">
-          <div class="output-num">Output 01</div>
           <div class="output-title">Direct Season Funding</div>
-          <div class="output-desc">Season pass revenue in the bank before round one. A paying member base that funds your season independently of any sponsorship conversation.</div>
+          <div class="output-desc">Season pass revenue in the bank before round one.</div>
         </div>
         <div class="output-card">
-          <div class="output-num">Output 02</div>
           <div class="output-title">Verified Audience Profile</div>
-          <div class="output-desc">A documented, data-backed picture of exactly who your audience is. Built from real survey responses. The kind of intelligence a sponsor needs to say yes.</div>
-        </div>
-        <div class="output-card">
-          <div class="output-num">Output 03</div>
-          <div class="output-title">Commercial Leverage</div>
-          <div class="output-desc">Walking into a sponsor conversation with a verified, paying audience that matches their customer profile changes the dynamic entirely. You're no longer asking — you're offering.</div>
+          <div class="output-desc">Data-backed picture of who your audience actually is.</div>
         </div>
       </div>
     </div>
   </section>
 </div>
 
-<!-- HOW IT WORKS -->
-<section>
+<section id="how">
   <div class="section-label">03 — How It Works</div>
   <div class="phases">
     <div class="phase-row">
       <div class="phase-num-col"><span class="phase-num">Phase 0</span></div>
       <div class="phase-content">
         <div class="phase-title">Intelligence Gathering</div>
-        <div class="phase-desc">We build and deploy a bespoke audience survey to your existing following. You post two videos. The survey runs for two weeks. This is how we find out exactly who your audience is before we build anything.</div>
+        <div class="phase-desc">We deploy a survey to find out who your audience is.</div>
       </div>
     </div>
     <div class="phase-row">
       <div class="phase-num-col"><span class="phase-num">Phase 1</span></div>
       <div class="phase-content">
         <div class="phase-title">Survey Analysis</div>
-        <div class="phase-desc">Survey results become a full audience profile — purchase behaviour, brand alignment, content preferences. From that data, we design your season pass: what's in it, what it costs, and what your audience will actually pay.</div>
+        <div class="phase-desc">Results become a profile for sponsors.</div>
       </div>
     </div>
     <div class="phase-row">
-      <div class="phase-num-col"><span class="phase-num">Phase 2A</span></div>
+      <div class="phase-num-col"><span class="phase-num">Phase 2</span></div>
       <div class="phase-content">
-        <div class="phase-title">Season Pass Launch</div>
-        <div class="phase-desc">We produce all the copy, membership page, and outreach hooks from your survey data. You review, approve, and launch. This is where the direct funding starts arriving.</div>
-      </div>
-    </div>
-    <div class="phase-row">
-      <div class="phase-num-col"><span class="phase-num">Phase 2B</span></div>
-      <div class="phase-content">
-        <div class="phase-title">Corporate Member Launch</div>
-        <div class="phase-desc">A second, separate tier for businesses — built around the audience intelligence from Phase 1. This is the warm pipeline that feeds Phase 4.</div>
-      </div>
-    </div>
-    <div class="phase-row">
-      <div class="phase-num-col"><span class="phase-num">Phase 4</span></div>
-      <div class="phase-content">
-        <div class="phase-title">High-Ticket Sponsors</div>
-        <div class="phase-desc">With a verified audience profile and a live paying member base, the commercial conversation changes. You're not cold-pitching — you're showing a sponsor documented proof of access to an audience that matches their customer.</div>
+        <div class="phase-title">Launch</div>
+        <div class="phase-desc">Season pass revenue starts arriving.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHO IT'S FOR -->
-<section style="padding-top: 0;">
+<section id="who">
   <div class="section-label">04 — Who It's For</div>
   <div class="for-grid">
     <div class="for-card">
       <div class="for-icon">Good fit</div>
-      <div class="for-title">Active in a Real Series</div>
-      <div class="for-desc">You're racing — or confirmed to race — this season. You have a calendar. The season pass has to be tied to something real.</div>
+      <div class="for-title">Active Drivers</div>
+      <div class="for-desc">You are racing this season.</div>
     </div>
     <div class="for-card">
       <div class="for-icon">Good fit</div>
-      <div class="for-title">Some Existing Audience</div>
-      <div class="for-desc">You don't need a massive following. You need an engaged one. A smaller audience that actually reads your posts outperforms a large passive one every time.</div>
+      <div class="for-title">Engaged Audience</div>
+      <div class="for-desc">You have a small but active following.</div>
     </div>
     <div class="for-card">
       <div class="for-icon">Good fit</div>
-      <div class="for-title">Ready to Do the Work</div>
-      <div class="for-desc">This is done-with-you, not done-for-you. You post the videos, attend weekly check-ins, and stay on schedule. The analysis, writing, and deliverables are on our side.</div>
+      <div class="for-title">Ready to Work</div>
+      <div class="for-desc">This is done-with-you.</div>
     </div>
   </div>
 </section>
 
-<!-- PILOT OFFER -->
 <div class="pilot-section">
   <div class="pilot-inner">
-    <div class="pilot-label">The Pilot</div>
-    <h2 class="pilot-headline">
-      Free for<br>
-      <em>2–3 drivers</em><br>
-      this season.
-    </h2>
-    <p class="pilot-body">
-      Race Funded is currently in a free pilot phase with a small number of drivers. You get the full program — every phase, every deliverable — <strong>at no cost</strong>, in exchange for full participation, weekly check-ins, and a written testimonial at the end.
-    </p>
+    <h2 class="pilot-headline">Free for<br><em>2–3 drivers</em><br>this season.</h2>
+    <p class="pilot-body">Currently in a free pilot phase. You get the full program at no cost in exchange for participation and a testimonial.</p>
     <div class="pilot-terms">
-      <div class="pilot-term">Full participation</div>
       <div class="pilot-term">Weekly check-ins</div>
       <div class="pilot-term">Written testimonial</div>
-      <div class="pilot-term">2–3 drivers only</div>
     </div>
-    <a href="#apply" class="btn-primary">Apply Below</a>
   </div>
 </div>
 
-<!-- QUESTIONNAIRE EMBED -->
 <div id="apply">
   <div class="form-section">
     <div class="section-label" style="justify-content: center;">05 — Apply</div>
     <h2 class="form-headline">Tell us about your season</h2>
-    <p class="form-sub">Takes around 10 minutes. We review every submission and follow up directly.</p>
+    <p class="form-sub">Takes around 10 minutes. We review every submission manually.</p>
 
-    <!-- LIVE TYPEFORM EMBED -->
     <div class="form-container">
+      <!-- Fixed Embed Code for GitHub -->
       <div data-tf-live="01JNG06K76A7Q6E3R2J8X3S92Y"></div>
-      <script src="//embed.typeform.com/next/embed.js"></script>
     </div>
-
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-brand">Race <span>Funded</span> by Trackside Partners</div>
-  <div class="footer-legal">racefunded.com &nbsp;·&nbsp; © 2026 Trackside Partners</div>
+  <div class="footer-legal">racefunded.com &nbsp;·&nbsp; © 2026</div>
 </footer>
+
+<!-- Move script to bottom for best performance -->
+<script src="//embed.typeform.com/next/embed.js"></script>
 
 </body>
 </html>
